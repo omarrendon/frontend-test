@@ -3,6 +3,7 @@ import { TextField, Button, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/actions/dataActions";
+import Swal from "sweetalert2";
 
 const FormAddProduct = ({ handleClose }) => {
   const dispatch = useDispatch();
@@ -60,6 +61,7 @@ const FormAddProduct = ({ handleClose }) => {
     e.preventDefault();
     dispatch(addProduct(datos));
     handleClose();
+    Swal.fire("Success!", "your add a new product!", "success");
   };
 
   return (
