@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Install dependencies
       - npm install
-  bulid:
+  build:
     commands:
       - echo Run build
       - npm run build
